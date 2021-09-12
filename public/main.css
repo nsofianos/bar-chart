@@ -15,8 +15,10 @@ main {
 }
 
 .chart {
+  background-color: antiquewhite;
   margin: auto;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .bar {
