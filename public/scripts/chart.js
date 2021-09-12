@@ -1,10 +1,18 @@
 $(document).ready(function () {
   $("button").click(function () {
-    $("p").hide();
-    drawBarChart();
+    $(".chart-container").empty();
+    $(".chart-container").prepend(drawBarChart());
   });
 });
 
-const drawBarChart = () => {
+const drawBarChart = (data, options, element) => {
   console.log("drawn chart");
+  const $barChart = $(`
+  <div class="chart">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  `);
+  return $barChart;
 };

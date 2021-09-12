@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+}
+
+main {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  background-color: #f4f1ec;
+}
+
+.chart-container {
+  height: 50%;
+}
+
+.chart {
+  margin: auto;
+  display: flex;
+}
+
+.bar {
+  margin: 0.5em;
+  height: 100px;
+  width: 20px;
+  background-color: #555;
+}
