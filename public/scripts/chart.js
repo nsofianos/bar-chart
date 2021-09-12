@@ -1,7 +1,9 @@
 $(document).ready(function () {
   $("button").click(function () {
-    $(".chart-container").empty();
-    $(".chart-container").prepend(drawBarChart(6));
+    const data = $("#fitems").val();
+    drawBarChart(data);
+    //$(".chart-container").empty();
+    //$(".chart-container").prepend(drawBarChart(data));
   });
 });
 
@@ -13,7 +15,6 @@ const createBarElement = () => {
 };
 
 const drawBarChart = (data, options, element) => {
-  console.log("drawn chart");
   const $barChart = $(`
   <div class="chart">
   </div>
@@ -21,5 +22,6 @@ const drawBarChart = (data, options, element) => {
   for (let i = 0; i < data; i++) {
     $barChart.prepend(createBarElement());
   }
-  return $barChart;
+  $(".chart-container").empty();
+  $(".chart-container").prepend($barChart);
 };
