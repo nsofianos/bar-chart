@@ -2,14 +2,15 @@ $(document).ready(function () {
   $("button").click(function () {
     const data = $("#fitems").val();
     drawBarChart(data);
-    //$(".chart-container").empty();
-    //$(".chart-container").prepend(drawBarChart(data));
+  });
+  $("#fitems").on("change", () => {
+    drawItemDetails();
   });
 });
 
 const createBarElement = () => {
   const $bar = $(`
-    <div class="bar"></div>
+  <div class="bar"></div>
   `);
   return $bar;
 };
@@ -24,4 +25,8 @@ const drawBarChart = (data, options, element) => {
   }
   $(".chart-container").empty();
   $(".chart-container").prepend($barChart);
+};
+
+const drawItemDetails = () => {
+  console.log($("#fitems").val());
 };
