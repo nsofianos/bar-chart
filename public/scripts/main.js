@@ -5,8 +5,15 @@ $(document).ready(function () {
   $("button").click(function () {
     const data = {
       totalItems: $("#fitems").val(),
-      itemDetails: [{ name: "apple", value: 10 }],
+      itemDetails: [],
     };
+    for (let i = 0; i < data.totalItems; i++) {
+      data.itemDetails.push({
+        name: $(`#item-name${i + 1}`).val(),
+        value: $(`#item-val${i + 1}`).val(),
+      });
+    }
+    console.log(data.itemDetails);
     drawBarChart(data);
   });
   $("#fitems").on("change", () => {
