@@ -1,6 +1,9 @@
 $(document).ready(function () {
   $("button").click(function () {
-    const data = $("#fitems").val();
+    const data = {
+      totalItems: $("#fitems").val(),
+      itemDetails: [{ name: "apple", value: 10 }],
+    };
     drawBarChart(data);
   });
   $("#fitems").on("change", () => {
@@ -8,9 +11,12 @@ $(document).ready(function () {
   });
 });
 
-const createBarElement = () => {
+const createBarElement = (itemDetails) => {
   const $bar = $(`
-  <div class="bar"></div>
+  <div class="bar-container">
+    <label>${itemDetails.value}</label>
+    <div class="bar"></div>
+  </div>
   `);
   return $bar;
 };
@@ -27,15 +33,15 @@ createItemOptionsElement = (itemNumber) => {
 };
 
 const drawBarChart = (data, options, element) => {
+  $(".chart-container").empty();
   const $barChart = $(`
   <div class="chart">
   </div>
   `);
-  for (let i = 0; i < data; i++) {
-    $barChart.prepend(createBarElement());
+  for (let i = 0; i < data.totalItems; i++) {
+    $barChart.append(createBarElement(data.itemDetails[0]));
   }
-  $(".chart-container").empty();
-  $(".chart-container").prepend($barChart);
+  $(".chart-container").append($barChart);
 };
 
 const drawItemDetails = () => {
