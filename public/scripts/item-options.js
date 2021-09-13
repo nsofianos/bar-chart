@@ -5,6 +5,7 @@ const createItemOptionsElement = (itemNumber) => {
     <label>Item ${itemNumber}</label>
     <textarea class="item-name" id="item-name${itemNumber}" placeholder="Name"></textarea>
     <textarea class="item-value" id="item-val${itemNumber}" placeholder="Value"></textarea>
+    <input type="color" value="#e66465" id="item-color${itemNumber}"></input>
   </div>
   `);
   return $itemOptions;
@@ -13,6 +14,7 @@ const createItemOptionsElement = (itemNumber) => {
 export const drawItemDetails = () => {
   //clear fields
   $("#item-options-tab").empty();
+
   const $numberOfItems = $("#fitems").val();
   const $itemOptionsTab = $("#item-options-tab");
   //draw fields

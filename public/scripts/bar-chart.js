@@ -3,7 +3,7 @@ const createBarElement = (itemDetails) => {
   const $bar = $(`
   <div class="bar-container">
     <label>${itemDetails.value}</label>
-    <div class="bar"></div>
+    <div class="bar" style="background-color:${itemDetails.color}"></div>
     <label>${itemDetails.name}</label>
   </div>
   `);
