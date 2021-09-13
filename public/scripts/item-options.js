@@ -1,3 +1,4 @@
+//creates fields for entering details for each item
 const createItemOptionsElement = (itemNumber) => {
   const $itemOptions = $(`
   <div class="options-container">
@@ -8,12 +9,14 @@ const createItemOptionsElement = (itemNumber) => {
   `);
   return $itemOptions;
 };
-
+//draw all item fields
 export const drawItemDetails = () => {
+  //clear fields
   $("#item-options-tab").empty();
-  const numberOfItems = $("#fitems").val();
+  const $numberOfItems = $("#fitems").val();
   const $itemOptionsTab = $("#item-options-tab");
-  for (let i = 1; i <= numberOfItems; i++) {
+  //draw fields
+  for (let i = 1; i <= $numberOfItems; i++) {
     $itemOptionsTab.append(createItemOptionsElement(i));
   }
 };
