@@ -24,12 +24,19 @@ h4 {
   margin: 0;
 }
 
-.chart {
+.chart-container {
+  height: 300px;
   background-color: antiquewhite;
+  position: relative;
+}
+.chart {
   margin: auto;
   display: flex;
   justify-content: space-evenly;
-  height: 300px;
+  bottom: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .chart-options {

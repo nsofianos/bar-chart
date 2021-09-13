@@ -27,4 +27,6 @@ export const drawBarChart = (data, options, element) => {
     $barChart.append(createBarElement(barSizes[i], data.itemDetails[i]));
   }
   $(".chart-container").append($barChart);
+  $(".chart").hide();
+  $(".chart").slideDown(1000);
 };
