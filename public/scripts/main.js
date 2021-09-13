@@ -19,7 +19,6 @@ $(document).ready(function () {
     }
     //draw chart
     drawBarChart(data);
-    console.log(data);
   });
   //update item detail fields if user changes number of items
   $("#fitems").on("change", () => {

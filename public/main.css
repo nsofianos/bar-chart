@@ -24,15 +24,12 @@ h4 {
   margin: 0;
 }
 
-.chart-container {
-  height: 50%;
-}
-
 .chart {
   background-color: antiquewhite;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
+  height: 300px;
 }
 
 .chart-options {
@@ -46,11 +43,11 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .bar {
-  height: 100px;
-  width: 20px;
+  width: 50px;
   background-color: #555;
 }
 
