@@ -15,6 +15,17 @@ const createBarElement = () => {
   return $bar;
 };
 
+createItemOptionsElement = (itemNumber) => {
+  const $itemOptions = $(`
+  <div class="options-container">
+    <label>Item ${itemNumber}</label>
+    <textarea placeholder="Name"></textarea>
+    <textarea placeholder="Value"></textarea>
+  </div>
+  `);
+  return $itemOptions;
+};
+
 const drawBarChart = (data, options, element) => {
   const $barChart = $(`
   <div class="chart">
@@ -28,5 +39,10 @@ const drawBarChart = (data, options, element) => {
 };
 
 const drawItemDetails = () => {
-  console.log($("#fitems").val());
+  $("#item-options-tab").empty();
+  const numberOfItems = $("#fitems").val();
+  const $itemOptionsTab = $("#item-options-tab");
+  for (let i = 1; i <= numberOfItems; i++) {
+    $itemOptionsTab.append(createItemOptionsElement(i));
+  }
 };
