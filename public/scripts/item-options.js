@@ -3,8 +3,8 @@ const createItemOptionsElement = (itemNumber) => {
   const $itemOptions = $(`
   <div class="options-container">
     <label>Item ${itemNumber}</label>
-    <textarea class="item-name" id="item-name${itemNumber}" placeholder="Name"></textarea>
-    <textarea class="item-value" id="item-val${itemNumber}" placeholder="Value"></textarea>
+    <textarea id="item-name${itemNumber}" placeholder="Name"></textarea>
+    <textarea id="item-val${itemNumber}" placeholder="Value"></textarea>
     <input type="color" value="#e66465" id="item-color${itemNumber}"></input>
   </div>
   `);

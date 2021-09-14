@@ -10,24 +10,47 @@ html {
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  text-align: center;
 }
 
 main {
-  height: 90%;
-  width: 90%;
+  width: 80%;
   margin: auto;
-  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
+label {
+  display: block;
 }
 
 h4 {
   margin: 0;
 }
 
+.bar-chart {
+  width: 80%;
+}
+
 .chart-container {
-  height: 300px;
-  background-color: antiquewhite;
+  height: 30vh;
   position: relative;
+  background-color: white;
 }
 .chart {
   margin: auto;
@@ -42,7 +65,7 @@ h4 {
 .chart-options {
   display: flex;
   flex-direction: column;
-  margin: 1em;
+  margin-top: 1em;
 }
 
 .bar-container {
@@ -61,14 +84,28 @@ h4 {
 .options-tab {
   margin: 0.5em;
 }
+.option {
+  margin-right: 0.5em;
+  min-width: 0;
+  min-height: 0;
+}
 
 .options-container {
   display: flex;
   flex-direction: column;
   width: 25%;
+  margin-right: 0.5em;
 }
 
 #item-options-tab {
   display: flex;
   flex-wrap: wrap;
+}
+
+#chart-title {
+  text-align: center;
+}
+.graph-options {
+  display: flex;
+  overflow: hidden;
 }
