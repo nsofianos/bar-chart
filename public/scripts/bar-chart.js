@@ -16,6 +16,9 @@ const createBarElement = (barSize, itemDetails) => {
 export const drawBarChart = (data, options, element) => {
   //clear chart
   $(".chart-container").empty();
+  //set title
+  $("#chart-title").text(options.title);
+  //initialize chart element
   const $barChart = $(`
   <div class="chart">
   </div>

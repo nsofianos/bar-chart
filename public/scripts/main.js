@@ -9,6 +9,10 @@ $(document).ready(function () {
       totalItems: $("#fitems").val(),
       itemDetails: [],
     };
+    //chart options
+    const chartOptions = {
+      title: $("#gtitle").val(),
+    };
     //store item detail values in data
     for (let i = 0; i < data.totalItems; i++) {
       data.itemDetails.push({
@@ -18,7 +22,7 @@ $(document).ready(function () {
       });
     }
     //draw chart
-    drawBarChart(data);
+    drawBarChart(data, chartOptions);
   });
   //update item detail fields if user changes number of items
   $("#fitems").on("change", () => {
