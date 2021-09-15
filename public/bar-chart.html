@@ -16,8 +16,11 @@
     <main>
       <section class="bar-chart">
         <h2 id="chart-title">Title of the bar chart</h2>
-        <div class="chart-container"></div>
-        <h3 id="xaxis-label">X Axis</h3>
+        <div class="chart-container">
+          <h3 class="axis-label" id="yaxis-label">Y Axis</h3>
+          <div class="chart"></div>
+        </div>
+        <h3 class="axis-label" id="xaxis-label">X Axis</h3>
         <div class="chart-options">
           <div class="options-tab">
             <h4>Data Set</h4>
@@ -51,8 +54,8 @@
                 <textarea id="op-xaxis"></textarea>
               </div>
               <div class="option">
-                <label for="gyaxis">Y Axis Label</label>
-                <textarea></textarea>
+                <label for="op-yaxis">Y Axis Label</label>
+                <textarea id="op-yaxis"></textarea>
               </div>
             </div>
           </div>

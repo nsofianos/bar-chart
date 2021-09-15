@@ -48,30 +48,30 @@ h4 {
 }
 
 .bar-chart {
-  width: 80%;
+  width: 85%;
 }
 
 .chart-container {
-  min-height: 30vh;
+  height: 30vh;
   position: relative;
   background-color: white;
-  border-left: 1px solid gray;
-  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
 }
 .chart {
-  margin: auto;
   display: flex;
   justify-content: space-evenly;
-  bottom: 0;
-  position: absolute;
   padding-top: 1em;
   height: 100%;
-  width: 100%;
+  width: 95%;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 
 .chart-options {
   display: flex;
   flex-direction: column;
+  padding-left: 2em;
 }
 
 .bar-container {
@@ -112,6 +112,15 @@ h4 {
 }
 #xaxis-label {
   margin-top: 1.5em;
+}
+
+#yaxis-label {
+  margin: 0;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.axis-label {
   text-align: center;
 }
 

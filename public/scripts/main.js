@@ -13,7 +13,7 @@ $(document).ready(function () {
     const chartOptions = {
       title: $("#op-title").val(),
       xaxis: $("#op-xaxis").val(),
-      //yaxis: $("#yaxis-label").val(),
+      yaxis: $("#op-yaxis").val(),
     };
     console.log(chartOptions);
     //store item detail values in data
