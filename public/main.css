@@ -39,6 +39,9 @@ textarea {
 label {
   display: block;
 }
+.item-label {
+  font-size: 12px;
+}
 
 h4 {
   margin: 0;
@@ -69,7 +72,6 @@ h4 {
 .chart-options {
   display: flex;
   flex-direction: column;
-  margin-top: 1em;
 }
 
 .bar-container {
@@ -108,6 +110,11 @@ h4 {
 #chart-title {
   text-align: center;
 }
+#xaxis-label {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
 .graph-options {
   display: flex;
   overflow: hidden;

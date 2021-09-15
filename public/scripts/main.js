@@ -11,8 +11,11 @@ $(document).ready(function () {
     };
     //chart options
     const chartOptions = {
-      title: $("#gtitle").val(),
+      title: $("#op-title").val(),
+      xaxis: $("#op-xaxis").val(),
+      //yaxis: $("#yaxis-label").val(),
     };
+    console.log(chartOptions);
     //store item detail values in data
     for (let i = 0; i < data.totalItems; i++) {
       data.itemDetails.push({

@@ -18,6 +18,9 @@ export const drawBarChart = (data, options, element) => {
   $(".chart-container").empty();
   //set title
   $("#chart-title").text(options.title);
+  //set x and y axis labels
+  $("#xaxis-label").text(options.xaxis);
+  //$("#yaxis-label").text(options.yaxis);
   //initialize chart element
   const $barChart = $(`
   <div class="chart">
