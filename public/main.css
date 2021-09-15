@@ -11,6 +11,7 @@ html {
 html,
 body {
   height: 100vh;
+  background-color: bisque;
 }
 
 body {
@@ -27,7 +28,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: white;
 }
 
 textarea {
@@ -48,9 +49,11 @@ h4 {
 }
 
 .chart-container {
-  height: 30vh;
+  min-height: 30vh;
   position: relative;
   background-color: white;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 .chart {
   margin: auto;
@@ -58,6 +61,7 @@ h4 {
   justify-content: space-evenly;
   bottom: 0;
   position: absolute;
+  padding-top: 1em;
   height: 100%;
   width: 100%;
 }
@@ -69,7 +73,6 @@ h4 {
 }
 
 .bar-container {
-  margin: 0.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,4 +111,9 @@ h4 {
 .graph-options {
   display: flex;
   overflow: hidden;
+}
+
+.item-label {
+  position: absolute;
+  bottom: -1.5em;
 }

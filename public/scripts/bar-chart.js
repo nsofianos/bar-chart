@@ -6,7 +6,7 @@ const createBarElement = (barSize, itemDetails) => {
   <div class="bar-container">
     <label>${itemDetails.value}</label>
     <div class="bar" style="background-color:${itemDetails.color}; height:${barSize}px;"></div>
-    <label>${itemDetails.name}</label>
+    <label class="item-label">${itemDetails.name}</label>
   </div>
   `);
   return $bar;
