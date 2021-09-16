@@ -39,15 +39,16 @@ textarea {
 label {
   display: block;
 }
-.item-label {
-  font-size: 12px;
-}
 
 h4 {
   margin: 0;
 }
 
-.bar-chart {
+hr {
+  margin: 0;
+}
+
+section {
   width: 85%;
 }
 
@@ -56,35 +57,33 @@ h4 {
   position: relative;
   background-color: white;
   display: flex;
-  justify-content: space-between;
 }
 .chart {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 1em;
   height: 100%;
   width: 95%;
   border: 1px solid gray;
+  position: relative;
 }
 
 .chart-divisions {
   height: 100%;
-  width: 95%;
-  position: absolute;
-  right: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-}
-
-hr {
-  margin: 0;
+  position: absolute;
 }
 
 .chart-options {
   display: flex;
   flex-direction: column;
   padding-left: 2em;
+}
+
+#chart-title {
+  text-align: center;
 }
 
 .bar-container {
@@ -97,6 +96,10 @@ hr {
 
 .bar {
   width: 50px;
+}
+
+.item-label {
+  font-size: 12px;
 }
 
 .options-tab {
@@ -120,9 +123,6 @@ hr {
   flex-wrap: wrap;
 }
 
-#chart-title {
-  text-align: center;
-}
 #xaxis-label {
   margin-top: 1.5em;
 }
@@ -131,12 +131,24 @@ hr {
   margin: 0;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
+  margin-right: auto;
 }
 
 .axis-label {
   text-align: center;
 }
 
+.yaxis-scale-label {
+  font-size: 0.8em;
+}
+
+.yaxis-scale {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
 .graph-options {
   display: flex;
   overflow: hidden;

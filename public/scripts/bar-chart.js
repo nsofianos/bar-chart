@@ -15,7 +15,7 @@ const createBarElement = (barSize, itemDetails) => {
 //creates the bar chart
 export const drawBarChart = (data, options, element) => {
   //clear chart
-  $(".chart").empty();
+  $(".bar-container").remove();
   //set title
   $("#chart-title").text(options.title);
   //set x and y axis labels
