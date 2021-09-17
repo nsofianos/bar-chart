@@ -15,7 +15,6 @@ $(document).ready(function () {
       xaxis: $("#op-xaxis").val(),
       yaxis: $("#op-yaxis").val(),
     };
-    console.log(chartOptions);
     //store item detail values in data
     for (let i = 0; i < data.totalItems; i++) {
       data.itemDetails.push({

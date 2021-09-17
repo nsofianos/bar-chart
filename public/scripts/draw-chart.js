@@ -1,4 +1,5 @@
 import { getBarSizes } from "./bar-sizes.js";
+import { getBreakpoints } from "./breakpoints.js";
 
 //creates html element for bar
 const createBarElement = (barSize, itemDetails) => {
@@ -15,19 +16,17 @@ const createBarElement = (barSize, itemDetails) => {
 const drawYScaleUnits = (data) => {
   //store item values in array, then grab the highest value
   const itemValues = [];
-  for (const item of data) {
-    itemValues.push(Number.parseInt(item.value));
-  }
-  let highestValue = Math.max(...itemValues);
-  while (highestValue > 10) highestValue /= 10;
-  console.log(highestValue);
-  highestValue = Math.round(highestValue / 0.5) * 0.5;
-  console.log(highestValue);
+  for (const item of data) itemValues.push(item.value);
+  const maxVal = Math.max(...itemValues);
+  //get breakpoints
+  const breakpoints = getBreakpoints(maxVal);
   //reset old labels
   $(".yaxis-scale-label").remove();
   //draw new labels
-  for (let i = 0; i < 6; i++) {
-    $(".yaxis-scale").append($(`<label class="yaxis-scale-label">1</label>`));
+  for (let i = 0; i < breakpoints.length; i++) {
+    $(".yaxis-scale").prepend(
+      $(`<label class="yaxis-scale-label">${breakpoints[i]}</label>`)
+    );
   }
 };
 
