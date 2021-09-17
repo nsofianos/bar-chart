@@ -1,5 +1,5 @@
 import { drawItemDetails } from "./item-options.js";
-import { drawBarChart } from "./bar-chart.js";
+import { drawBarChart } from "./draw-chart.js";
 
 $(document).ready(function () {
   //build chart button

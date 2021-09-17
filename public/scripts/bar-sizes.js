@@ -7,10 +7,8 @@ export const getBarSizes = (data) => {
     itemValues.push(Number.parseInt(item.value));
   }
   //find the highest value in the array...
-  let highestValue = 0;
-  for (const value of itemValues) {
-    if (value > highestValue) highestValue = value;
-  }
+  const highestValue = Math.max(...itemValues);
+
   //calculate ratio based on that value
   const ratio = 250 / highestValue;
   //return a new array with sizes
