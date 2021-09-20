@@ -19,10 +19,15 @@ const formatNumber = (n) => {
   return numWithBuffer * 10 ** Math.floor(Math.log10(n));
 };
 
-export const getBreakpoints = (n) => {
+export const getBreakpoints = (data) => {
+  //store item values in array, then grab the highest value
+  const itemValues = [];
+  for (const item of data) itemValues.push(item.value);
+  const maxVal = Math.max(...itemValues);
+
   const breakpoints = [];
-  const formattedNumber = formatNumber(n);
-  const dividedNumber = formattedNumber / 10 ** Math.floor(Math.log10(n));
+  const formattedNumber = formatNumber(maxVal);
+  const dividedNumber = formattedNumber / 10 ** Math.floor(Math.log10(maxVal));
   //depending on formattedNumber, break into 4 or 5 pieces and push into array
   for (let i = 0; i < 6; i++) {
     if (dividedNumber % 5 === 0) {

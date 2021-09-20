@@ -1,19 +1,18 @@
 //returns the sizes for all bars
-export const getBarSizes = (data) => {
-  const itemValues = [];
-  const barSizes = [];
+export const getBarSizes = (barData, breakPoints) => {
   //create array with item values
-  for (const item of data) {
+  const itemValues = [];
+  for (const item of barData) {
     itemValues.push(Number.parseInt(item.value));
   }
-  //find the highest value in the array...
-  const highestValue = Math.max(...itemValues);
 
-  //calculate ratio based on that value
-  const ratio = 250 / highestValue;
-  //return a new array with sizes
+  //get the max breakpoint value
+  const maxBreakpoint = Math.max(...breakPoints);
+
+  //return a new array with size ratios
+  const barSizes = [];
   for (const value of itemValues) {
-    barSizes.push(value * ratio);
+    barSizes.push(value / maxBreakpoint);
   }
   return barSizes;
 };
