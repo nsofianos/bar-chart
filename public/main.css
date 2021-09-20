@@ -151,6 +151,7 @@ section {
 
 .yaxis-scale-label {
   font-size: 0.8em;
+  text-align: end;
 }
 
 .yaxis-scale {
