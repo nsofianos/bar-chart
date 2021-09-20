@@ -46,6 +46,9 @@ h4 {
 
 hr {
   margin: 0;
+  border: none;
+  background-color: lightgray;
+  height: 1px;
 }
 
 section {
@@ -96,10 +99,7 @@ section {
 
 .bar {
   width: 50px;
-}
-
-.item-label {
-  font-size: 12px;
+  margin-top: 0.1em;
 }
 
 .options-tab {
@@ -127,6 +127,11 @@ section {
 .item-label {
   position: absolute;
   bottom: -1.5em;
+  font-size: 0.8em;
+}
+
+.item-value-label {
+  font-size: 0.8em;
 }
 
 .graph-options {

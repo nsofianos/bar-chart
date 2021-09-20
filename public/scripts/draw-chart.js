@@ -12,7 +12,7 @@ const createBarElement = (barSizeRatio, itemDetails) => {
   //create element
   const $bar = $(`
   <div class="bar-container">
-    <label>${itemDetails.value}</label>
+    <label class="item-value-label">${itemDetails.value}</label>
     <div class="bar" style="background-color:${itemDetails.color}; height:${barSizePercentage}%;"></div>
     <label class="item-label">${itemDetails.name}</label>
   </div>
