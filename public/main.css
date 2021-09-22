@@ -11,7 +11,8 @@ html {
 html,
 body {
   height: 100vh;
-  background-color: bisque;
+  background-color: lightgray;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 body {
@@ -28,7 +29,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: #ffffff;
+  border-radius: 0.25em;
+  color: #636363;
 }
 
 textarea {
