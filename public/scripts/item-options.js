@@ -1,3 +1,4 @@
+import { randomColor } from "./random-color.js";
 //creates fields for entering details for each item
 const createItemOptionsElement = (itemNumber) => {
   const $itemOptions = $(`
@@ -5,7 +6,9 @@ const createItemOptionsElement = (itemNumber) => {
     <label>Item ${itemNumber}</label>
     <textarea id="item-name${itemNumber}" placeholder="Name"></textarea>
     <textarea id="item-val${itemNumber}" placeholder="Value"></textarea>
-    <input type="color" value="#e66465" id="item-color${itemNumber}"></input>
+    <input type="color" value="${randomColor(
+      100
+    )}" id="item-color${itemNumber}"></input>
   </div>
   `);
   return $itemOptions;
