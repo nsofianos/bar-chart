@@ -24,6 +24,7 @@ header {
 }
 
 main {
+  max-width: 1000px;
   width: 80%;
   margin: auto;
   display: flex;
@@ -37,10 +38,47 @@ main {
 textarea {
   resize: none;
   width: 100%;
+  margin-bottom: 0.4em;
+  font-family: inherit;
+  color: #636363;
+  height: 25%;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #dddddd;
+}
+
+textarea:focus {
+  box-shadow: 0 0 5px rgb(158, 200, 211);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgb(163, 207, 219);
 }
 
 label {
   display: block;
+}
+
+select {
+  border: 1px solid #909090;
+  color: #909090;
+  background-color: #ffffff;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: 0.05em;
+  font-weight: 200;
+}
+
+h3 {
+  letter-spacing: 0.2em;
+  font-weight: 200;
 }
 
 h4 {
@@ -150,7 +188,7 @@ section {
   margin: 0;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  margin-right: auto;
+  margin-right: 0.3em;
 }
 
 .axis-label {
