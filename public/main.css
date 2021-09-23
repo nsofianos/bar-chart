@@ -11,7 +11,7 @@ html {
 html,
 body {
   height: 100vh;
-  background-color: lightgray;
+  background-color: blanchedalmond;
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -40,17 +40,13 @@ textarea {
   width: 100%;
   margin-bottom: 0.4em;
   font-family: inherit;
-  color: #636363;
-  height: 25%;
+  height: 3em;
 
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   outline: none;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
-  border: 1px solid #dddddd;
+  border: 1px solid #c9c9c9;
 }
 
 textarea:focus {
@@ -97,7 +93,7 @@ section {
 }
 
 .chart-container {
-  height: 30vh;
+  height: 40vh;
   position: relative;
   background-color: white;
   display: flex;
@@ -107,8 +103,9 @@ section {
   justify-content: space-evenly;
   height: 100%;
   width: 95%;
-  border: 1px solid gray;
+  border: 1px solid #909090;
   position: relative;
+  box-shadow: 0 0 20px #c3c3c3;
 }
 
 .chart-divisions {

@@ -7,7 +7,7 @@ const createItemOptionsElement = (itemNumber) => {
     <textarea id="item-name${itemNumber}" placeholder="Name"></textarea>
     <textarea id="item-val${itemNumber}" placeholder="Value"></textarea>
     <input type="color" value="${randomColor(
-      100
+      200
     )}" id="item-color${itemNumber}"></input>
   </div>
   `);
