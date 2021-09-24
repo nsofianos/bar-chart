@@ -10,13 +10,17 @@ html {
 
 html,
 body {
-  height: 100vh;
   font-family: "Source Sans Pro", sans-serif;
 }
 
 body {
   margin: 0;
   background-color: aliceblue;
+  padding-bottom: 5em;
+}
+
+button {
+  margin-top: 2em;
 }
 
 header {
@@ -46,6 +50,7 @@ header {
 
 main {
   padding-top: 3em;
+  padding-bottom: 3em;
   border: 1px solid #b1d7ef;
   max-width: 1000px;
   width: 80%;
@@ -84,7 +89,7 @@ label {
 }
 
 select {
-  border: 1px solid #909090;
+  border: 1px solid #c9c9c9;
   color: #909090;
   background-color: #ffffff;
   outline: none;
