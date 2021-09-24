@@ -187,6 +187,13 @@ section {
   margin-right: 0.5em;
 }
 
+.data-options {
+  display: flex;
+}
+.data-option {
+  margin-right: 3em;
+}
+
 #item-options-tab {
   display: flex;
   flex-wrap: wrap;
