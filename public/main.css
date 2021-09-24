@@ -87,6 +87,13 @@ select {
   border: 1px solid #909090;
   color: #909090;
   background-color: #ffffff;
+  outline: none;
+  transition: all 0.1s ease-in-out;
+}
+
+select:focus {
+  box-shadow: 0 0 5px rgb(158, 200, 211);
+  border: 1px solid rgb(163, 207, 219);
 }
 
 h2 {

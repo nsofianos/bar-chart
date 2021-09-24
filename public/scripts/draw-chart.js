@@ -1,45 +1,8 @@
 import { getBarSizes } from "./bar-sizes.js";
+import { drawYScaleUnits } from "./draw-Yscale.js";
 import { getBreakpoints } from "./breakpoints.js";
+import { createBarElement } from "./create-bar.js";
 
-//creates html element for bar
-const createBarElement = (barSizeRatio, itemDetails, totalItems) => {
-  //calculate height %
-  let barHeightPercentage = Math.round((barSizeRatio * 100 * 10) / 10);
-  //minimum size 1% height
-  if (barHeightPercentage === 0) barHeightPercentage++;
-  //calculate width based on total items
-  const barWidthPercentage = 16 - totalItems * 1.2;
-
-  //create element
-  const $bar = $(`
-  <div class="bar-container" style="width:${barWidthPercentage}%">
-    <label class="item-value-label">${itemDetails.value}</label>
-    <div class="bar" style="background-color:${itemDetails.color}; height:${barHeightPercentage}%;"></div>
-    <label class="item-label">${itemDetails.name}</label>
-  </div>
-  `);
-
-  return $bar;
-};
-
-const drawYScaleUnits = (data) => {
-  //get breakpoints
-  const breakpoints = getBreakpoints(data);
-
-  //reset old labels
-  $(".yaxis-scale-label").remove();
-
-  //draw new labels & horizontal lines
-  $(".chart-divisions").empty();
-  for (let i = 0; i < breakpoints.length; i++) {
-    $(".yaxis-scale").prepend(
-      $(`<label class="yaxis-scale-label">${breakpoints[i]}</label>`)
-    );
-    if (i > 1) $(".chart-divisions").append("<hr/>");
-  }
-};
-
-//creates the bar chart
 export const drawBarChart = (data, options, element) => {
   //clear chart
   $(".bar-container").remove();
