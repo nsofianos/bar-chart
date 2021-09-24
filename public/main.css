@@ -20,7 +20,24 @@ body {
 }
 
 button {
-  margin-top: 2em;
+  display: block;
+  font-size: 15px;
+  background-color: #c8fcf1;
+  border: none;
+  color: #636363;
+  height: 3em;
+  border-radius: 0.2em;
+  font-family: inherit;
+  margin: 0.5em;
+  margin-top: 1.5em;
+  letter-spacing: 0.3em;
+  box-shadow: 0 0 3px rgb(158, 200, 211);
+}
+
+button:hover {
+  background-color: #69b9ff;
+  color: white;
+  box-shadow: 0 0 5px rgb(158, 200, 211);
 }
 
 header {
