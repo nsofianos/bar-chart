@@ -103,26 +103,43 @@
             </div>
           </div>
           <div class="options-tab">
-            <h4>Label Options</h4>
+            <h4>Label Font Options</h4>
             <div class="data-options">
-              <div class="data-option">
-                <label for="axis-label-font">Axis Font Size</label>
-                <select name="axis-label-font">
-                  <option value="1">Small</option>
-                  <option value="2">Medium</option>
-                  <option value="3">Large</option>
-                </select>
-              </div>
-              <div class="data-option">
-                <label for="item-label-font">Item Font Size</label>
-                <select name="item-label-font">
-                  <option value="1">Small</option>
-                  <option value="2">Medium</option>
-                  <option value="3">Large</option>
-                </select>
+                <div class="data-option">
+                  <label for="axis-label-font">Axis Font Size</label>
+                  <select name="axis-label-font">
+                    <option value="1">Small</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Large</option>
+                  </select>
+                </div>
+                <div class="data-option">
+                  <label for="item-label-font">Item Font Size</label>
+                  <select name="item-label-font">
+                    <option value="1">Small</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Large</option>
+                  </select>
+                </div>
               </div>
             </div>
-          </div>
+            <div class="options-tab">
+              <h4>Label Color Options</h4>
+              <div class="data-options">
+                <div class="data-option">
+                  <label for="axis-font-color">Axis Font Color</label>
+                  <input class="color-option" type="color" id="axis-font-color" value="#636363"></input>
+                </div>
+                <div class="data-option">
+                  <label for="item-font-color">Item Font Color</label>
+                  <input class="color-option" type="color" id="item-font-color" value="#636363"></input>
+                </div>
+                <div class="data-option">
+                  <label for="title-font-color">Title Font Color</label>
+                  <input class="color-option" type="color" id="title-font-color" value="#636363"></input>
+                </div>
+              </div>
+            </div>
           <button id="buildChart">Build chart</button>
         </div>
       </section>

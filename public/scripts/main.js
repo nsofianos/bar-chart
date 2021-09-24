@@ -2,6 +2,9 @@ import { drawItemDetails } from "./item-options.js";
 import { drawBarChart } from "./draw-chart.js";
 
 $(document).ready(function () {
+  //default item
+  drawItemDetails();
+
   //build chart button
   $("button").click(function () {
     //create data on button click
