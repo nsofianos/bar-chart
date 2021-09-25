@@ -17,6 +17,9 @@ $(document).ready(function () {
       title: $("#op-title").val(),
       xaxis: $("#op-xaxis").val(),
       yaxis: $("#op-yaxis").val(),
+      tfont: $("#tfont").val(),
+      afont: $("#afont").val(),
+      ifont: $("#ifont").val(),
     };
     //store item detail values in data
     for (let i = 0; i < data.totalItems; i++) {

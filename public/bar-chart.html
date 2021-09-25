@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap"
       rel="stylesheet"
     />
     <link
@@ -37,7 +37,7 @@
 
     <main>
       <section>
-        <h2 id="chart-title">Title of the bar chart</h2>
+        <h2 id="chart-title">Graph Title</h2>
         <div class="chart-container">
           <h3 class="axis-label" id="yaxis-label">Y Axis</h3>
           <div class="yaxis-scale"></div>
@@ -105,20 +105,28 @@
           <div class="options-tab">
             <h4>Label Font Options</h4>
             <div class="data-options">
+              <div class="data-option">
+                <label for="title-label-font">Title Font Size</label>
+                <select name="title-label-font" id="tfont">
+                  <option value="1.4">Small</option>
+                  <option selected="selected" value="1.7">Medium</option>
+                  <option value="2">Large</option>
+                </select>
+              </div>
                 <div class="data-option">
                   <label for="axis-label-font">Axis Font Size</label>
-                  <select name="axis-label-font">
+                  <select name="axis-label-font" id="afont">
                     <option value="1">Small</option>
-                    <option value="2">Medium</option>
-                    <option value="3">Large</option>
+                    <option selected="selected" value="1.15">Medium</option>
+                    <option value="1.5">Large</option>
                   </select>
                 </div>
                 <div class="data-option">
                   <label for="item-label-font">Item Font Size</label>
-                  <select name="item-label-font">
-                    <option value="1">Small</option>
-                    <option value="2">Medium</option>
-                    <option value="3">Large</option>
+                  <select name="item-label-font" id="ifont">
+                    <option value="0.8">Small</option>
+                    <option value="1">Medium</option>
+                    <option value="1.2">Large</option>
                   </select>
                 </div>
               </div>

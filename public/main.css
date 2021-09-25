@@ -11,6 +11,7 @@ html {
 html,
 body {
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
 }
 
 body {
@@ -91,7 +92,8 @@ textarea {
   outline: none;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
-  border: 1px solid #bbbbbb;
+  border: 1px solid #ababab;
+  color: #636363;
 }
 
 textarea:focus {
@@ -106,7 +108,7 @@ label {
 }
 
 select {
-  border: 1px solid #bbbbbb;
+  border: 1px solid #ababab;
   color: #636363;
   background-color: #ffffff;
   outline: none;
@@ -119,19 +121,20 @@ select:focus {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   letter-spacing: 0.05em;
   font-weight: 200;
 }
 
 h3 {
   letter-spacing: 0.2em;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 h4 {
   margin: 0;
   text-decoration: underline;
+  font-weight: 400;
 }
 
 hr {
@@ -178,6 +181,7 @@ section {
 
 #chart-title {
   text-align: center;
+  font-weight: 300;
 }
 
 .bar-container {
@@ -223,13 +227,12 @@ section {
   flex-wrap: wrap;
 }
 
-.item-label {
+#item-label-name {
   position: absolute;
   bottom: -1.5em;
-  font-size: 0.8em;
 }
 
-.item-value-label {
+.item-label {
   font-size: 0.8em;
 }
 

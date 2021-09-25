@@ -10,9 +10,9 @@ export const createBarElement = (barSizeRatio, itemDetails, totalItems) => {
   //create element
   const $bar = $(`
   <div class="bar-container" style="width:${barWidthPercentage}%">
-    <label class="item-value-label">${itemDetails.value}</label>
+    <label class="item-label" id="item-value-label">${itemDetails.value}</label>
     <div class="bar" style="background-color:${itemDetails.color}; height:${barHeightPercentage}%;"></div>
-    <label class="item-label">${itemDetails.name}</label>
+    <label class="item-label" id="item-label-name">${itemDetails.name}</label>
   </div>
   `);
 

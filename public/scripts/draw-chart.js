@@ -15,6 +15,11 @@ export const drawBarChart = (data, options, element) => {
   $("#xaxis-label").text(options.xaxis);
   $("#yaxis-label").text(options.yaxis);
 
+  //set font sizes
+  $("#chart-title").css("font-size", `${options.tfont}em`);
+  $("#xaxis-label").css("font-size", `${options.afont}em`);
+  $("#yaxis-label").css("font-size", `${options.afont}em`);
+
   //draw y scale units
   drawYScaleUnits(data.itemDetails);
 
@@ -28,6 +33,9 @@ export const drawBarChart = (data, options, element) => {
       createBarElement(barSizes[i], data.itemDetails[i], data.totalItems)
     );
   }
+  //set item font size
+  $(".item-label").css("font-size", `${options.ifont}em`);
+  //sliding animation
   $(".bar-container").hide();
   $(".bar-container").show("slide", { direction: "down" }, 1000);
 };
