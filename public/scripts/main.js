@@ -20,6 +20,9 @@ $(document).ready(function () {
       tfont: $("#tfont").val(),
       afont: $("#afont").val(),
       ifont: $("#ifont").val(),
+      tcolor: $("#tcolor").val(),
+      acolor: $("#acolor").val(),
+      icolor: $("#icolor").val(),
     };
     //store item detail values in data
     for (let i = 0; i < data.totalItems; i++) {
