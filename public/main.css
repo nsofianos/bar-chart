@@ -21,7 +21,6 @@ body {
 }
 
 button {
-  display: block;
   font-size: 15px;
   background-color: #c8fcf1;
   border: none;
@@ -33,6 +32,7 @@ button {
   margin-top: 1.5em;
   letter-spacing: 0.3em;
   box-shadow: 0 0 3px rgb(158, 200, 211);
+  width: 100%;
 }
 
 button:hover {
@@ -81,26 +81,26 @@ main {
   color: #636363;
 }
 
-textarea {
-  resize: none;
+.text-input {
   width: 100%;
   margin-bottom: 0.4em;
   font-family: inherit;
-  height: 3em;
-
-  transition: all 0.3s ease-in-out;
+  height: 2.7em;
+  transition: all 0.2s ease-in-out;
   outline: none;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+  padding: 3px 0px 1em 3px;
+  margin: 1px 1px 3px 0px;
   border: 1px solid #ababab;
   color: #636363;
 }
 
-textarea:focus {
+.text-input:focus {
   box-shadow: 0 0 5px rgb(158, 200, 211);
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
   border: 1px solid rgb(163, 207, 219);
+}
+
+::placeholder {
+  opacity: 0.7;
 }
 
 label {
@@ -146,6 +146,13 @@ hr {
 
 section {
   width: 85%;
+}
+
+.error-msg {
+  text-align: center;
+  color: #ff3434;
+  background-color: #ffcece;
+  font-weight: 400;
 }
 
 .chart-container {

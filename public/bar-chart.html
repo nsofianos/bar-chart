@@ -52,103 +52,105 @@
           </div>
         </div>
         <h3 class="axis-label" id="xaxis-label">X Axis</h3>
+        <div class="error-msg-container">
+        </div>
         <div class="chart-options">
-          <div class="options-tab" id="data-options-tab">
-            <h4>Data Set</h4>
-            <div class="data-options">
-              <div class="data-option">
-                <label for="fitems">Number of Items</label>
-                <select name="fitems" id="fitems">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
-              <div class="data-option">
-                <label for="ftheme">Theme</label>
-                <select name="ftheme" id="ftheme">
-                  <option value="1">Pastel</option>
-                  <option value="2">Business</option>
-                  <option value="3">Quirky</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="options-tab">
-            <h4>Item Details</h4>
-            <div id="item-options-tab"></div>
-          </div>
-          <div class="options-tab" id="graph-options-tab">
-            <h4>Graph Labels</h4>
-            <div class="graph-options">
-              <div class="option">
-                <label for="op-title">Graph Title</label>
-                <textarea id="op-title" placeholder="Title"></textarea>
-              </div>
-              <div class="option">
-                <label for="op-xaxis">X Axis Label</label>
-                <textarea id="op-xaxis" placeholder="X label"></textarea>
-              </div>
-              <div class="option">
-                <label for="op-yaxis">Y Axis Label</label>
-                <textarea id="op-yaxis" placeholder="Y Label"></textarea>
-              </div>
-            </div>
-          </div>
-          <div class="options-tab">
-            <h4>Label Font Options</h4>
-            <div class="data-options">
-              <div class="data-option">
-                <label for="title-label-font">Title Font Size</label>
-                <select name="title-label-font" id="tfont">
-                  <option value="1.4">Small</option>
-                  <option selected="selected" value="1.7">Medium</option>
-                  <option value="2">Large</option>
-                </select>
-              </div>
+            <div class="options-tab" id="data-options-tab">
+              <h4>Data Set</h4>
+              <div class="data-options">
                 <div class="data-option">
-                  <label for="axis-label-font">Axis Font Size</label>
-                  <select name="axis-label-font" id="afont">
-                    <option value="1">Small</option>
-                    <option selected="selected" value="1.15">Medium</option>
-                    <option value="1.5">Large</option>
+                  <label for="fitems">Number of Items</label>
+                  <select name="fitems" id="fitems">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                   </select>
                 </div>
                 <div class="data-option">
-                  <label for="item-label-font">Item Font Size</label>
-                  <select name="item-label-font" id="ifont">
-                    <option value="0.8">Small</option>
-                    <option value="1">Medium</option>
-                    <option value="1.2">Large</option>
+                  <label for="ftheme">Theme</label>
+                  <select name="ftheme" id="ftheme">
+                    <option value="1">Pastel</option>
+                    <option value="2">Business</option>
+                    <option value="3">Quirky</option>
                   </select>
                 </div>
               </div>
             </div>
             <div class="options-tab">
-              <h4>Label Color Options</h4>
-              <div class="data-options">
-                <div class="data-option">
-                  <label for="acolor">Axis Font Color</label>
-                  <input class="color-option" type="color" id="acolor" value="#636363"></input>
+              <h4>Item Details</h4>
+              <div id="item-options-tab"></div>
+            </div>
+            <div class="options-tab" id="graph-options-tab">
+              <h4>Graph Labels</h4>
+              <div class="graph-options">
+                <div class="option">
+                  <label for="op-title">Graph Title</label>
+                  <input type="text" autocomplete="off" name="title" class="text-input" id="op-title" placeholder="Title"></input>
                 </div>
-                <div class="data-option">
-                  <label for="icolor">Item Font Color</label>
-                  <input class="color-option" type="color" id="icolor" value="#636363"></input>
+                <div class="option">
+                  <label for="op-xaxis">X Axis Label</label>
+                  <input type="text" autocomplete="off" name="xaxis" class="text-input" id="op-xaxis" placeholder="X label"></input>
                 </div>
-                <div class="data-option">
-                  <label for="tcolor">Title Font Color</label>
-                  <input class="color-option" type="color" id="tcolor" value="#636363"></input>
+                <div class="option">
+                  <label for="op-yaxis">Y Axis Label</label>
+                  <input type="text" autocomplete="off" name="yaxis" class="text-input" id="op-yaxis" placeholder="Y Label"></input>
                 </div>
               </div>
             </div>
-          <button id="buildChart">BUILD CHART</button>
+            <div class="options-tab">
+              <h4>Label Font Options</h4>
+              <div class="data-options">
+                <div class="data-option">
+                  <label for="title-label-font">Title Font Size</label>
+                  <select name="title-label-font" id="tfont">
+                    <option value="1.4">Small</option>
+                    <option selected="selected" value="1.7">Medium</option>
+                    <option value="2">Large</option>
+                  </select>
+                </div>
+                  <div class="data-option">
+                    <label for="axis-label-font">Axis Font Size</label>
+                    <select name="axis-label-font" id="afont">
+                      <option value="1">Small</option>
+                      <option selected="selected" value="1.15">Medium</option>
+                      <option value="1.5">Large</option>
+                    </select>
+                  </div>
+                  <div class="data-option">
+                    <label for="item-label-font">Item Font Size</label>
+                    <select name="item-label-font" id="ifont">
+                      <option value="0.8">Small</option>
+                      <option value="1">Medium</option>
+                      <option value="1.2">Large</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="options-tab">
+                <h4>Label Color Options</h4>
+                <div class="data-options">
+                  <div class="data-option">
+                    <label for="acolor">Axis Font Color</label>
+                    <input class="color-option" type="color" id="acolor" value="#636363"></input>
+                  </div>
+                  <div class="data-option">
+                    <label for="icolor">Item Font Color</label>
+                    <input class="color-option" type="color" id="icolor" value="#636363"></input>
+                  </div>
+                  <div class="data-option">
+                    <label for="tcolor">Title Font Color</label>
+                    <input class="color-option" type="color" id="tcolor" value="#636363"></input>
+                  </div>
+                </div>
+              </div>
+            <button id="buildChart">BUILD CHART</button>
         </div>
       </section>
     </main>

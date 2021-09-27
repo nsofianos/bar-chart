@@ -4,8 +4,8 @@ const createItemOptionsElement = (itemNumber) => {
   const $itemOptions = $(`
   <div class="options-container">
     <label>Item ${itemNumber}</label>
-    <textarea id="item-name${itemNumber}" placeholder="Name"></textarea>
-    <textarea id="item-val${itemNumber}" placeholder="Value"></textarea>
+    <input type="text" autocomplete="off" class="text-input" id="item-name${itemNumber}" placeholder="Name"></input>
+    <input type="text" autocomplete="off" class="text-input" id="item-val${itemNumber}" placeholder="Value"></input>
     <input type="color" value="${randomColor(
       200
     )}" id="item-color${itemNumber}"></input>

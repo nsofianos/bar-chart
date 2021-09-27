@@ -1,5 +1,6 @@
 import { drawItemDetails } from "./item-options.js";
 import { drawBarChart } from "./draw-chart.js";
+import { validateForm } from "./form-validation.js";
 
 $(document).ready(function () {
   //default item
@@ -24,6 +25,7 @@ $(document).ready(function () {
       acolor: $("#acolor").val(),
       icolor: $("#icolor").val(),
     };
+
     //store item detail values in data
     for (let i = 0; i < data.totalItems; i++) {
       data.itemDetails.push({
@@ -32,6 +34,8 @@ $(document).ready(function () {
         color: $(`#item-color${i + 1}`).val(),
       });
     }
+    //validate fields
+    if (!validateForm(chartOptions, data.itemDetails)) return;
     //draw chart
     drawBarChart(data, chartOptions);
   });
