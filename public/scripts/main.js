@@ -1,10 +1,21 @@
 import { drawItemDetails } from "./item-options.js";
 import { drawBarChart } from "./draw-chart.js";
 import { validateForm } from "./form-validation.js";
+import { drawCustomUnitsField } from "./custom-units.js";
 
 $(document).ready(function () {
   //default item
   drawItemDetails();
+
+  //update item detail fields if user changes number of items
+  $("#fitems").on("change", () => {
+    drawItemDetails();
+  });
+
+  //custom units field
+  $("#funits").on("change", () => {
+    drawCustomUnitsField();
+  });
 
   //build chart button
   $("button").click(function () {
@@ -13,8 +24,10 @@ $(document).ready(function () {
       totalItems: $("#fitems").val(),
       itemDetails: [],
     };
+
     //chart options
     const chartOptions = {
+      units: $("#funits").val(),
       title: $("#op-title").val(),
       xaxis: $("#op-xaxis").val(),
       yaxis: $("#op-yaxis").val(),
@@ -34,13 +47,11 @@ $(document).ready(function () {
         color: $(`#item-color${i + 1}`).val(),
       });
     }
+
     //validate fields
     if (!validateForm(chartOptions, data.itemDetails)) return;
+
     //draw chart
     drawBarChart(data, chartOptions);
-  });
-  //update item detail fields if user changes number of items
-  $("#fitems").on("change", () => {
-    drawItemDetails();
   });
 });

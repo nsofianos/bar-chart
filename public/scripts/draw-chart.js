@@ -24,7 +24,7 @@ export const drawBarChart = (data, options, element) => {
   $("#chart-title").css("color", `${options.tcolor}`);
   $("h3").css("color", `${options.acolor}`);
   //draw y scale units
-  drawYScaleUnits(data.itemDetails);
+  drawYScaleUnits(data.itemDetails, options.units);
 
   //get sizes for each bar
   const breakPoints = getBreakpoints(data.itemDetails);
