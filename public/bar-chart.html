@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+    <!-- Title -->
     <title>Bar Chart Maker</title>
+
+    <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Jquery UI -->
     <script
       src="https://code.jquery.com/ui/1.13.0-rc.2/jquery-ui.min.js"
       integrity="sha256-RQLbEU539dpygNMsBGZlplus6CkitaLy0btTCHcULpI="
       crossorigin="anonymous"
     ></script>
+
+    <!-- App JS -->
     <script type="module" src="scripts/main.js"></script>
-    <script type="module" src="scripts/item-options.js"></script>
+
+    <!-- App CSS -->
     <link rel="stylesheet" href="main.css" />
+
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap"
       rel="stylesheet"
@@ -19,6 +30,8 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Icon -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -26,7 +39,11 @@
       crossorigin="anonymous"
     />
   </head>
+
+
   <body>
+
+    <!-- Header -->
     <header>
       <div class="header-items">
         <i class="far fa-chart-bar fa-3x" id="icon"></i>
@@ -35,14 +52,21 @@
       <p>Insert some data, hit the button, have a good time.</p>
     </header>
 
+    <!-- Main Section -->
     <main>
       <section>
-        <h2 id="chart-title">Graph Title</h2>
-        <div class="chart-container">
-          <h3 class="axis-label" id="yaxis-label">Y Axis</h3>
-          <div class="yaxis-scale"></div>
 
+        <!-- Chart title-->
+        <h2 id="chart-title">Graph Title</h2>
+
+        <!-- Chart Default-->
+        <div class="chart-container">
+          <!-- ylabel -->
+          <h3 class="axis-label" id="yaxis-label">Y Axis</h3>
+          <!-- yscale -->
+          <div class="yaxis-scale"></div>
           <div class="chart">
+            <!-- breakpoint lines -->
             <div class="chart-divisions">
               <hr />
               <hr />
@@ -51,13 +75,19 @@
             </div>
           </div>
         </div>
+        <!-- xlabel -->
         <h3 class="axis-label" id="xaxis-label">X Axis</h3>
-        <div class="error-msg-container">
-        </div>
+
+        <!-- error msgs -->
+        <div class="error-msg-container"></div>
+
+        <!-- Chart Options -->
         <div class="chart-options">
+          <!-- Data Set Tab -->
             <div class="options-tab" id="data-options-tab">
               <h4>Data Set</h4>
               <div class="data-options" id="data-options">
+                <!-- no. items selection -->
                 <div class="data-option">
                   <label for="fitems">No. of Items</label>
                   <select name="fitems" id="fitems">
@@ -73,14 +103,16 @@
                     <option value="10">10</option>
                   </select>
                 </div>
+                <!-- theme selection -->
                 <div class="data-option">
                   <label for="ftheme">Theme</label>
                   <select name="ftheme" id="ftheme">
                     <option value="1">Pastel</option>
+                    <option value="3">Lite</option>
                     <option value="2">Business</option>
-                    <option value="3">Quirky</option>
                   </select>
                 </div>
+                <!-- units selection -->
                 <div class="data-option">
                   <label for="funits">Y-Units</label>
                   <select name="funits" id="funits">
@@ -99,30 +131,40 @@
                 </div>
               </div>
             </div>
+
+            <!-- Item Detail Tab -->
             <div class="options-tab">
               <h4>Item Details</h4>
               <div id="item-options-tab"></div>
             </div>
+
+            <!-- Graph Labels Tab-->
             <div class="options-tab" id="graph-options-tab">
               <h4>Graph Labels</h4>
               <div class="graph-options">
+                <!-- title label -->
                 <div class="option">
                   <label for="op-title">Graph Title</label>
                   <input type="text" autocomplete="off" name="title" class="text-input" id="op-title" placeholder="Title"></input>
                 </div>
+                <!-- xaxis label -->
                 <div class="option">
                   <label for="op-xaxis">X Axis Label</label>
                   <input type="text" autocomplete="off" name="xaxis" class="text-input" id="op-xaxis" placeholder="X label"></input>
                 </div>
+                <!-- yaxis label -->
                 <div class="option">
                   <label for="op-yaxis">Y Axis Label</label>
                   <input type="text" autocomplete="off" name="yaxis" class="text-input" id="op-yaxis" placeholder="Y Label"></input>
                 </div>
               </div>
             </div>
+
+            <!-- Label Font Options Tab -->
             <div class="options-tab">
               <h4>Label Font Options</h4>
               <div class="data-options">
+                <!-- title font size -->
                 <div class="data-option">
                   <label for="title-label-font">Title Font Size</label>
                   <select name="title-label-font" id="tfont">
@@ -131,6 +173,7 @@
                     <option value="2">Large</option>
                   </select>
                 </div>
+                <!-- axis font size -->
                   <div class="data-option">
                     <label for="axis-label-font">Axis Font Size</label>
                     <select name="axis-label-font" id="afont">
@@ -139,6 +182,7 @@
                       <option value="1.5">Large</option>
                     </select>
                   </div>
+                  <!-- item font size -->
                   <div class="data-option">
                     <label for="item-label-font">Item Font Size</label>
                     <select name="item-label-font" id="ifont">
@@ -147,6 +191,7 @@
                       <option value="1.2">Large</option>
                     </select>
                   </div>
+                  <!-- yscale font size -->
                   <div class="data-option">
                     <label for="yunits-label-font">Y-Units Font Size</label>
                     <select name="yunits-label-font" id="yfont">
@@ -157,23 +202,30 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Label Color Options Tab -->
               <div class="options-tab">
                 <h4>Label Color Options</h4>
                 <div class="data-options">
+                  <!-- axis font color -->
                   <div class="data-option">
                     <label for="acolor">Axis Font Color</label>
                     <input class="color-option" type="color" id="acolor" value="#636363"></input>
                   </div>
+                  <!-- item font color -->
                   <div class="data-option">
                     <label for="icolor">Item Font Color</label>
                     <input class="color-option" type="color" id="icolor" value="#636363"></input>
                   </div>
+                  <!-- title font color -->
                   <div class="data-option">
                     <label for="tcolor">Title Font Color</label>
                     <input class="color-option" type="color" id="tcolor" value="#636363"></input>
                   </div>
                 </div>
               </div>
+
+              <!-- Build Chart Button -->
             <button id="buildChart">BUILD CHART</button>
         </div>
       </section>
