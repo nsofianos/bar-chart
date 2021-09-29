@@ -51,6 +51,9 @@ $(document).ready(function () {
     //validate fields
     if (!validateForm(chartOptions, data.itemDetails)) return;
 
+    //scroll to chart
+    $("html, body").animate({ scrollTop: 100 }, 400);
+
     //draw chart
     drawBarChart(data, chartOptions);
   });
