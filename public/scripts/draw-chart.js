@@ -38,7 +38,8 @@ export const drawBarChart = (data, options, element) => {
     );
   }
 
-  //set item font size/color
+  //set item font size/color, y-units font size
+  $(".yaxis-scale-label").css("font-size", `${options.yfont}em`);
   $(".item-label").css("font-size", `${options.ifont}em`);
   $(".item-label").css("color", `${options.icolor}`);
 

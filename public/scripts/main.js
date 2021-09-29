@@ -32,6 +32,7 @@ $(document).ready(function () {
       xaxis: $("#op-xaxis").val(),
       yaxis: $("#op-yaxis").val(),
       tfont: $("#tfont").val(),
+      yfont: $("#yfont").val(),
       afont: $("#afont").val(),
       ifont: $("#ifont").val(),
       tcolor: $("#tcolor").val(),
