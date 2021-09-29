@@ -3,6 +3,7 @@ export const validateForm = (options, items) => {
   $(".error-msg-container").empty();
   let valid = true;
   let error = "";
+
   //check each input field for error
   $(".text-input").each(function (i, obj) {
     //check is value is a number
@@ -13,6 +14,7 @@ export const validateForm = (options, items) => {
         error = "value";
       } else $(obj).css("border", "");
     });
+
     //check if field is empty
     if (!$(obj).val()) {
       $(obj).css("border", "1px solid #ff6262");
@@ -20,6 +22,7 @@ export const validateForm = (options, items) => {
       error = "empty";
     } else $(obj).css("border", "");
   });
+
   //display message if error
   if (!valid) {
     if (error === "value")

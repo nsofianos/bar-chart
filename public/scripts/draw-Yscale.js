@@ -3,13 +3,14 @@ import { getBreakpoints } from "./breakpoints.js";
 export const drawYScaleUnits = (data, units) => {
   //get breakpoints
   const breakpoints = getBreakpoints(data);
-  console.log(units);
 
   //reset old labels
   $(".yaxis-scale-label").remove();
 
   //draw new labels & horizontal lines
   $(".chart-divisions").empty();
+
+  //draw y scale labels with units
   for (let i = 0; i < breakpoints.length; i++) {
     switch (units) {
       case "none":

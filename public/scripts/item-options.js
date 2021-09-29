@@ -13,6 +13,7 @@ const createItemOptionsElement = (itemNumber) => {
   `);
   return $itemOptions;
 };
+
 //draw all item fields
 export const drawItemDetails = () => {
   //clear fields
@@ -20,6 +21,7 @@ export const drawItemDetails = () => {
 
   const $numberOfItems = $("#fitems").val();
   const $itemOptionsTab = $("#item-options-tab");
+
   //draw fields
   for (let i = 1; i <= $numberOfItems; i++) {
     $itemOptionsTab.append(createItemOptionsElement(i));

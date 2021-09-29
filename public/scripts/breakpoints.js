@@ -2,10 +2,11 @@ const formatNumber = (n) => {
   //gets n with 1 decimal place to the right. Example: 4232 = 4.232
   let dividedNum = n / 10 ** Math.floor(Math.log10(n));
 
-  let numWithBuffer;
   //check if number is too close to the next integer
   if (Math.round(dividedNum) === Math.ceil(dividedNum)) dividedNum += 1;
+
   //round number up to something that will divide cleanly, with a buffer
+  let numWithBuffer;
   if (
     Math.ceil(dividedNum) % 7 === 0 ||
     Math.ceil(dividedNum) % 9 === 0 ||
