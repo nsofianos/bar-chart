@@ -5,7 +5,7 @@ const createItemOptionsElement = (itemNumber) => {
   <div class="options-container">
     <label>Item ${itemNumber}</label>
     <input type="text" autocomplete="off" class="text-input" id="item-name${itemNumber}" placeholder="Name"></input>
-    <input type="text" autocomplete="off" class="text-input" id="item-val${itemNumber}" placeholder="Value"></input>
+    <input type="text" autocomplete="off" class="text-input value" id="item-val${itemNumber}" placeholder="Value"></input>
     <input type="color" value="${randomColor(
       200
     )}" id="item-color${itemNumber}"></input>
