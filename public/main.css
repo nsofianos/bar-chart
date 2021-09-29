@@ -41,6 +41,10 @@ button:hover {
   box-shadow: 0 0 5px rgb(158, 200, 211);
 }
 
+p {
+  color: #4c75a9;
+}
+
 header {
   padding-top: 2em;
   margin-bottom: 2em;
